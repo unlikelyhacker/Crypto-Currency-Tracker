@@ -1,0 +1,33 @@
+import requests
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+COINMARKETCAP_URL = 'https://api.coinmarketcap.com/v1/ticker/'
+
+def get_price(currency):
+    """Get the current price of a cryptocurrency in USD."""
+    response = requests.get(COINMARKETCAP_URL + currency)
+    data = response.json()
+    price = data[0]['price_usd']
+    return float(price)
+
+def get_change(currency):
+    """Get the percentage change in price of a cryptocurrency over the past hour."""
+    response = requests.get(COINMARKETCAP_URL + currency)
+    data = response.json()
+    change = data[0]['percent_change_1h']
+    return float(change)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/price/<currency>')
+def get_price_route(currency):
+    price = get_price(currency)
+    change = get_change(currency)
+    return f'Price: ${price:.2f}<br>Change: {change:.2f}%'
+
+if __name__ == '__main__':
+    app.run
