@@ -4,24 +4,24 @@ This is a simple Crypto Currency Tracker I used to practice clean code, and to i
 
 TRY THIS FOR FURTHER USE.
 
-1. In the same directory as app.py, create a directory named templates and within that directory create a file named index.html with the following contents:
+1. In the same directory as app.py, create a directory named templates and within that directory create a file named index.html with the following contents:(Minus the spaces between the first letter of each command)
 
 **
-<!--
-<!doctype html>
-<html>
-  <head>
-    <title>Cryptocurrency Tracker</title>
-  </head>
-  <body>
-    <h1>Cryptocurrency Tracker</h1>
-    <form action="/price" method="get">
-      <label for="currency">Enter a cryptocurrency:</label>
-      <input type="text" name="currency" id="currency">
-      <button type="submit">Get Price</button>
-    </form>
-  </body>
-</html>
+
+<!d octype html>
+<h tml>
+  <h ead>
+    <t itle>Cryptocurrency Tracker</title>
+  </h ead>
+  <b ody>
+    <h 1>Cryptocurrency Tracker</h1>
+    <f orm action="/price" method="get">
+      <l abel for="currency">Enter a cryptocurrency:</label>
+      <i nput type="text" name="currency" id="currency">
+      <b utton type="submit">Get Price</button>
+    </f orm>
+  </b ody>
+</h tml>
 -->
 **
 
