@@ -7,6 +7,7 @@ TRY THIS FOR FURTHER USE.
 1. In the same directory as app.py, create a directory named templates and within that directory create a file named index.html with the following contents:
 
 **
+<!--
 <!doctype html>
 <html>
   <head>
@@ -21,6 +22,7 @@ TRY THIS FOR FURTHER USE.
     </form>
   </body>
 </html>
+-->
 **
 
 2. This template defines a form that allows the user to enter a cryptocurrency and submit the form to retrieve its price and change.
